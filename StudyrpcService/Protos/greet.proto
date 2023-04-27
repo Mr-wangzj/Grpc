@@ -1,0 +1,25 @@
+syntax = "proto3"; // proto版本
+
+option csharp_namespace = "StudyrpcService"; //命名空间
+
+package greet;   //包名
+
+
+//Greeter 提供的服务名称
+//SayHello 服务中的方法名称
+//HelloRequest 请求参数
+//HelloReply  响应参数
+service Greeter {              
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);  //服务中的方法名称
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}

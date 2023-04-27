@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "StudyrpcService.Protos";
+
+package test;
+
+service Test  {
+
+rpc  GetNumSum(RequestNumData) returns (SumResult);
+
+}
+message RequestNumData{
+	double num1=1;
+	double num2=2;
+}
+message SumResult{
+double	Sumval=1;
+bool  Success=2;
+
+}
